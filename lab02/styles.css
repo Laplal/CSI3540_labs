@@ -1,27 +1,38 @@
-#mainscreen {
+div.MainScreen {
     position: fixed;
     width: 65%;
     left: 0;
     height: 100%;
     background-color: #ffffff;
-    z-index: 1010101010
   }
   
-#sidescreen{
+div.SideScreen{
     position: fixed;
     width: 30%;
     left: 70%;
     height: 100%;
     background-color: #ffffff;
-    z-index: 1010101010;
     border-left: 1px solid black;
   }
 
 
-#vl{
-    width: 1px; /* Line width */
-    background-color: black; /* Line color */
-    height: 100%; /* Override in-line if you want specific height. */
-    display: inline-block;
+div.LeftMargin{
+  margin-left: 20px;
+}
 
+div.SectionTitle{
+  color: #2079c7;
+}
+
+div.TimeText{
+  margin-top: -10px;
+  margin-left: 30px;
+  font-size: 12px;
+  color:rgb(102, 102, 102) ;
+}
+div.DescText{
+  margin-top: -7px;
+  margin-left: 30px;
+  font-size: 13px;
+  color: rgb(102, 102, 102)
 }
