@@ -1,0 +1,42 @@
+div.MainScreen {
+    width: 70%;
+    float: left;
+    background-color: #ffffff;
+    border-right: 1px solid black;
+  }
+  
+div.SideScreen{
+    width: 30%;
+    background-color: #ffffff;
+    margin-left: 70%;
+  }
+
+
+div.LeftMargin{
+  margin-left: 20px;
+}
+
+div.SectionTitle{
+  color: #2079c7;
+}
+
+div.TimeText{
+  margin-top: -10px;  
+  margin-left: 30px;
+  font-size: 12px;
+  color:rgb(102, 102, 102) ;
+}
+div.DescText{
+  margin-top: -7px;
+  margin-left: 30px;
+  margin-right: 25px;
+  font-size: 13px;
+  color: rgb(102, 102, 102)
+}
+
+
+div.Fullscreen{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
