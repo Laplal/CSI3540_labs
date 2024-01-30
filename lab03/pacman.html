@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+
+    .game {
+      max-width: 800px;
+      margin: 30px auto;
+    }
+    .board {
+        display: grid;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .tile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: calc(10% - 10px);
+        position: relative;
+        border: 1px solid black;
+    }
+
+    .tile:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="game" class="game">
+      <div class="board" style="grid-template-columns: repeat(10, 1fr)">
+        <span class="tile"></span>
+        <span class="tile"></span>
+        <span class="tile"></span>
+        <span class="tile"></span>
+        <span class="tile"></span>
+        <span class="tile"></span>
+        <span class="tile"></span>
+        <span class="tile"></span>
+        <span class="tile"></span>
+        <span class="tile"></span>
+      </div>
+    </div>
+    <script>
+
+      console.log("hello");
+      let game = {
+        board: [".", ".",".", ".",".", "C",".", ".",".", "."],
+        display: function() {
+          console.log(this.board);
+        },
+        moveLeft: function() {
+          this.board = [".", ".",".", ".","C", ".",".", ".",".", "."]
+        }
+      };
+
+      game.display();
+
+      game.moveLeft();
+
+      game.display();
+
+    </script>
+  </body>
+</html>
+
+
