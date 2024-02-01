@@ -22,7 +22,7 @@
 #circle_dot{
     height: 30px;
     width: 30px;
-    background-color: #d1ffbd;
+    background-color: rgb(224, 67, 67);
     border-radius: 50%;
     display: inline-block;
     margin-top: -4px;
@@ -86,7 +86,7 @@ a{
     height: 400px;
     overflow: hidden;
     border-radius: 30%;
-    
+    animation: 2s ease 0s 1 slideInFromLeft;
 }
       
 .circular_image img {
@@ -118,9 +118,12 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    transition: background-color 0.3s, color 0.3s;  
 }
 
+.circle_info_1:hover{
+    background-color: white;
+}
 
 .circle_info_2 {
     width: 100px;
@@ -135,10 +138,24 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s, color 0.3s;  
 }
 
-a:hover{
+.circle_info_2:hover{
+    background-color: white;
+}
+
+ul.horizontal-list li a:hover{
     color:red;
     transition:color 0.3s;
 }
 
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
