@@ -7,16 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="gameCanvas" width="400" height="400"></canvas>
-  <div id="menu">
-    <h2>Welcome to Snake Game</h2>
-    <label for="borderCheckbox">Enable Borders:</label>
-    <input type="checkbox" id="borderCheckbox">
-    <br>
-    <label for="appleNumber">Number of Apples:</label>
-    <input type="number" id="appleNumber" min="1" max="10" value="1">
-    <br>
-    <button onclick="startGame()">Start Game</button>
+  <div id="container">
+    <div id="menu">
+      <h2>Welcome to Snake Game</h2>
+      <label for="borderCheckbox">Enable Borders:</label>
+      <input type="checkbox" id="borderCheckbox">
+      <br>
+      <label for="appleNumber">Number of Apples:</label>
+      <input type="number" id="appleNumber" min="1" max="10" value="1">
+      <br>
+      <button onclick="startGame()">Start Game</button>
+    </div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="scores">
+      <div id="score">Score: 0</div>
+      <div id="highScore">Highest Score: 0</div>
+    </div>
   </div>
   <script src="snake.js"></script>
 </body>
