@@ -13,8 +13,6 @@ function toggleDarkMode() {
     body.classList.toggle('dark-mode');
   }
   
-
-
 window.addEventListener('DOMContentLoaded', (event) => {
   canvas = document.getElementById('gameCanvas');
   ctx = canvas.getContext('2d');
@@ -62,7 +60,6 @@ function draw() {
 }
 
 function drawSnake() {
-  // Draw snake's body segments
   for (let i = 0; i < snake.length; i++) {
     let img = new Image();
     img.src = (i === 0) ? 'items/head.png' : 'items/body.png'; 
@@ -71,7 +68,6 @@ function drawSnake() {
 }
 
 function drawApples() {
-  // Draw apples
   apples.forEach(apple => {
     let img = new Image();
     img.src = 'items/apple.png';
@@ -153,7 +149,7 @@ function placeApple() {
   if (!apples.some(a => a.x === apple.x && a.y === apple.y)) {
     apples.push(apple);
   } else {
-    placeApple(); // Try again if the apple is placed on top of the snake
+    placeApple(); 
   }
 }
 
@@ -161,11 +157,11 @@ function gameOver() {
   clearInterval(gameInterval);
   document.removeEventListener('keydown', changeDirection);
   if (score > highestScore) {
-    highestScore = score; // New: Update highest score if needed
-    document.getElementById('highScore').innerText = 'Highest Score: ' + highestScore; // New: Display highest score
+    highestScore = score; 
+    document.getElementById('highScore').innerText = 'Highest Score: ' + highestScore; 
   }
   alert('Game Over! Your score: ' + score);
-  score = 0; // New: Reset score
+  score = 0; 
   showMenu();
 }
 
