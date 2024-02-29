@@ -8,6 +8,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  transition: background-color 0.3s ease;
+  margin-top: 20px 0;
 }
 
 #container {
@@ -16,9 +18,10 @@ body {
 
 canvas {
   display: block;
-  margin: 20px auto;
+  margin: 0 auto;
   border: 1px solid #ccc;
 }
+
 
 #menu {
   text-align: center;
@@ -27,8 +30,12 @@ canvas {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   max-width: 400px;
-  z-index: 1;
+  margin: 20px auto;
+  position: relative;
+  z-index: 2;
+  transition: background-color 0.3s ease;
 }
+
 
 #menu h2 {
   margin-top: 0;
@@ -46,6 +53,12 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 15px;
+}
+
+#container {
+  position: relative;
 }
 
 button:hover {
@@ -57,7 +70,31 @@ button:hover {
   margin-top: 20px;
 }
 
+#scores {
+  text-align: center;
+  margin-top: 20px;
+}
+
 #score,
 #highScore {
+  display: inline-block;
   margin-top: 10px;
 }
+
+#highScore {
+  margin-left: 200px;
+}
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode button {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode #menu {
+  background-color: #333;
+}
+

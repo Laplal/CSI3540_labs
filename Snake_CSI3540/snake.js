@@ -8,12 +8,19 @@ let menu;
 let score = 0;
 let highestScore = 0;
 
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+  }
+  
+
+
 window.addEventListener('DOMContentLoaded', (event) => {
   canvas = document.getElementById('gameCanvas');
   ctx = canvas.getContext('2d');
   menu = document.getElementById('menu');
 });
-
+  
 function startGame() {
   clearCanvas();
   initGame();
