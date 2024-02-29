@@ -9,7 +9,6 @@ body {
   justify-content: center;
   height: 100vh;
   transition: background-color 0.3s ease;
-  margin-top: 20px 0;
 }
 
 #container {
@@ -97,4 +96,3 @@ button:hover {
 .dark-mode #menu {
   background-color: #333;
 }
-

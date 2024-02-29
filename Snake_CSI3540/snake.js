@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   ctx = canvas.getContext('2d');
   menu = document.getElementById('menu');
 });
-  
+
 function startGame() {
   clearCanvas();
   initGame();
@@ -65,7 +65,7 @@ function drawSnake() {
   // Draw snake's body segments
   for (let i = 0; i < snake.length; i++) {
     let img = new Image();
-    img.src = (i === 0) ? 'head.png' : 'body.png'; 
+    img.src = (i === 0) ? 'items/head.png' : 'items/body.png'; 
     ctx.drawImage(img, snake[i].x * tileSize, snake[i].y * tileSize, tileSize, tileSize);
   }
 }
@@ -74,7 +74,7 @@ function drawApples() {
   // Draw apples
   apples.forEach(apple => {
     let img = new Image();
-    img.src = 'apple.png';
+    img.src = 'items/apple.png';
     ctx.drawImage(img, apple.x * tileSize, apple.y * tileSize, tileSize, tileSize);
   });
 }
