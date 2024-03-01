@@ -1,180 +1,213 @@
 .LeftMargin{
-    margin-left: 20px;
-  }   
-    
-  #FullName{
-    font-size: 22px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35px;
+  margin-left: 20px;
+}   
   
-  }     
-    
-  #Profession{
-    font-size: 14px;
-    position: relative;
-    bottom: 3%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    left: 25px;
-    margin-left: 20px;
-  }    
-    
+#FullName{
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 35px;
+
+}     
   
-  #circle_dot{
-    height: 30px;
-    width: 30px;
-    background-color: #80d8da;
-    border-radius: 50%;
-    display: inline-block;
-    margin-top: -4px;
-   
-  }
-  
-  .dots{
-    width: auto;
-    float: left;
-    height: 10%;
-  }
-  div.NameSection{
-    width: 38%;
-    float: left;
-    height: 10%;
-    bottom: 3px;
-    top: 10%;
-    margin-top: 1%;
-  }     
-    
-  div.TableSection{
-    width: 62%;
-    float: left;
-    top: 10%;
-  }    
-    
-  ul.horizontal-list{
-    list-style-type: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  
-  }       
-    
-  ul.horizontal-list li{
-    display: inline-block;
-    padding: 10px 8px;
-    margin-right: 15%;
-    margin-top: 8px;
-    margin-right: 1px solid black;
-  
-  }
-     
-  ul.horizontal-list li:not(:last-child){
-    border-right: 1px solid black;
-    box-sizing: border-box;
-    padding-right: 15%;
-  
-  
-  }
+#Profession{
+  font-size: 14px;
+  position: relative;
+  bottom: 3%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  left: 25px;
+  margin-left: 20px;
+}    
   
 
-  ul.horizontal-list li a:hover{
-    color:red;
-    transition:color 0.3s;
+#circle_dot{
+  height: 30px;
+  width: 30px;
+  background-color: #80d8da;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: -4px;
+ 
+}
+
+.dots{
+  width: auto;
+  float: left;
+  height: 10%;
+}
+div.NameSection{
+  width: 38%;
+  float: left;
+  height: 10%;
+  bottom: 3px;
+  top: 10%;
+  margin-top: 1%;
+}     
+  
+div.TableSection{
+  width: 62%;
+  float: left;
+  top: 10%;
+}    
+  
+ul.horizontal-list{
+  list-style-type: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}       
+  
+ul.horizontal-list li{
+  display: inline-block;
+  padding: 10px 8px;
+  margin-right: 15%;
+  margin-top: 8px;
+  margin-right: 1px solid black;
+
+}
+   
+ul.horizontal-list li:not(:last-child){
+  border-right: 1px solid black;
+  box-sizing: border-box;
+  padding-right: 15%;
+
+
 }
 
 
-  
-  a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-decoration: none;
-    color: black;
-  }
+ul.horizontal-list li a:hover{
+  color:red;
+  transition:color 0.3s;
+}
 
-  .FirstProjectImg{
-    position: absolute;
-    right: auto;
-    top: 15%;
-    width: 45%;
-    height: 300px;
-  }
 
-  .FirstProjectImg img {
-    width: 100%;
-    height: 100%;
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+
+a{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+.FirstProjectImg{
+  position: relative;
+  right: auto;
+  top: 15%;
+  width: 45%;
+  height: 300px;
+}
+
+.FirstProjectImg img {
+  width: 100%;
+  height: 100%;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 
 
 .SecondProjectImg{
-  position: absolute;
-  left: 70%;
-  top: 55%;
-  width: 400px;
-  height: 300px;
+position: relative;
+left: 70%;
+width: 400px;
+height: 300px;
 }
 
 .SecondProjectImg img {
-  width: 100%;
-  height: 100%;
-  animation: 1s ease-out 0s 1 slideInFromRight;
+width: 100%;
+height: 100%;
+animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
 .FirstProjectTitle{
-  font-family: Arial, Helvetica, sans-serif;
-  position: fixed;
-  left: 50%;
-  top: 13%;
+font-family: Arial, Helvetica, sans-serif;
+position: relative;
+left: 110%;
+top: -100%;
 }
 
 
 .FirstProjectText{
-  position: fixed;
-  left: 50%;
-  top: 30%;
+position: relative;
+left: 110%;
+top: -100%;
 }
 
 
 .SecondProjectTitle{
-  font-family: Arial, Helvetica, sans-serif;
-  position: fixed;
-  left: 7%;
-  top: 57%;
+font-family: Arial, Helvetica, sans-serif;
+position: relative;
+left: -250%;
+top: -90%;
+width: 150%;
 }
 
 .SecondProjectText{
-    position: fixed;
-    left: 7%;
-    top: 74%;
-  }
+  position: relative;
+  left:  -250%;
+  top: -83%;
+  width: 150%;
+
+}
 
 
 
-  a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-decoration: none;
-    color: black;
-  }
+a{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  color: black;
+}
 
 
-  a:hover{
-    color:red;
-    transition:color 0.3s;
+a:hover{
+  color:red;
+  transition:color 0.3s;
 }
 
 
 @keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+0% {
+  transform: translateX(-100%);
+}
+100% {
+  transform: translateX(0);
+}
 }
 
 
 @keyframes slideInFromRight {
-  0% {
-    transform: translateX(200%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+0% {
+  transform: translateX(200%);
+}
+100% {
+  transform: translateX(0);
+}
 }
 
+
+.ThirdProjectTitle{
+font-family: Arial, Helvetica, sans-serif;
+position: relative;
+right: -200%;
+top: -400%;
+width: 200%;
+top: -300px;
+}
+
+.ThirdProjectText{
+position: relative;
+right: -200%;
+ width: 200%;
+ top: -300px;
+}
+
+.ThirdProjectImg{
+  position: relative;
+  left: 150px;
+  top: 80px;
+  width: 20%;
+  height: 20%;
+  
+}
+
+.ThirdProjectImg img {
+  width: 100%;
+  height: 100%;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
