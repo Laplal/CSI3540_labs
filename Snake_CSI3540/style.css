@@ -69,11 +69,6 @@ button:hover {
   margin-top: 20px;
 }
 
-#scores {
-  text-align: center;
-  margin-top: 20px;
-}
-
 #score,
 #highScore {
   display: inline-block;
@@ -95,4 +90,47 @@ button:hover {
 
 .dark-mode #menu {
   background-color: #333;
+}
+
+
+#container {
+  position: relative;
+  display: flex;
+  justify-content: space-between; 
+}
+
+#scores {
+  text-align: left; 
+}
+
+#username {
+  margin-top: 10px; 
+}
+
+#topPlayers {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+#topPlayers h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+#playerList {
+  padding-left: 20px;
+  margin-top: 0;
+}
+
+#playerList li {
+  list-style: none;
+  margin-bottom: 5px;
 }

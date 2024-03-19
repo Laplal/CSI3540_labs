@@ -24,28 +24,8 @@ function startGame() {
   initGame();
   menu.style.display = 'none';
   document.addEventListener('keydown', changeDirection);
-  // Appel AJAX pour démarrer un nouveau jeu
-  $.ajax({
-    url: 'api.php',
-    type: 'POST',
-    data: { start_game: true },
-    success: function(response) {
-      // Vérifier si le jeu a démarré avec succès
-      if (response.status === 'success') {
-        // Démarrer le jeu
-        gameInterval = setInterval(gameLoop, 100);
-      } else {
-        // Afficher un message d'erreur si le jeu n'a pas pu démarrer
-        console.error('Unable to start the game.');
-      }
-    },
-    error: function(xhr, status, error) {
-      console.error(xhr.responseText);
-    }
-  });
+  gameInterval = setInterval(gameLoop, 100);
 }
-
-
 
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -162,7 +142,6 @@ function snakeEatsApple() {
 function eatApple() {
   apples = apples.filter(apple => apple.x !== snake[0].x || apple.y !== snake[0].y);
   placeApple();
-  updateScore(1); // Appel à l'API pour mettre à jour le score après avoir mangé une pomme
 }
 
 function placeApple() {
@@ -177,7 +156,12 @@ function placeApple() {
 function gameOver() {
   clearInterval(gameInterval);
   document.removeEventListener('keydown', changeDirection);
-  updateHighestScore(); // Appel à l'API pour mettre à jour le meilleur score
+  if (score > highestScore) {
+    highestScore = score; 
+    document.getElementById('highScore').innerText = 'Highest Score: ' + highestScore; 
+  }
+  alert('Game Over! Your score: ' + score);
+  score = 0; 
   showMenu();
 }
 
@@ -196,36 +180,4 @@ function changeDirection(event) {
 function updateScore(points) {
   score += points;
   document.getElementById('score').innerText = 'Score: ' + score;
-  updateScoreOnServer(score); // Appel à l'API pour mettre à jour le score sur le serveur
-}
-
-
-// Fonction pour mettre à jour le score sur le serveur
-function updateScoreOnServer(score) {
-  $.ajax({
-    url: 'api.php',
-    type: 'POST',
-    data: { score: score }, // Envoyer le nouveau score au serveur
-    success: function(response) {
-      // Gérer la réponse du serveur si nécessaire
-    },
-    error: function(xhr, status, error) {
-      console.error(xhr.responseText);
-    }
-  });
-}
-
-// Fonction pour mettre à jour le meilleur score sur le serveur
-function updateHighestScore() {
-  $.ajax({
-    url: 'api.php',
-    type: 'POST',
-    data: { highest_score: highestScore }, // Envoyer le meilleur score au serveur
-    success: function(response) {
-      // Gérer la réponse du serveur si nécessaire
-    },
-    error: function(xhr, status, error) {
-      console.error(xhr.responseText);
-    }
-  });
 }
